@@ -3,7 +3,7 @@ class Bill:
         self.amount = amount
         self.category = category
         self.date = date
-        self.user = user
+        self.user = user #test
 
     def __str__(self):
         return f"{self.category} Bill of ${self.amount:.2f} on {self.date}, paid by {self.user.name}"
