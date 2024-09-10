@@ -6,7 +6,6 @@ import tkinter as tk
 from gui.start_page import StartPage
 from gui.split_main import SplitMain
 from gui.new_split import NewSplit
-from gui.user_select import UserSelect
 
 class BudgetApp(tk.Tk):
     def __init__(self):
@@ -16,7 +15,7 @@ class BudgetApp(tk.Tk):
 
         # Create container for frames
         self.frames = {}
-        for F in (StartPage, SplitMain, NewSplit, UserSelect):
+        for F in (StartPage, SplitMain, NewSplit):
             frame = F(self)
             self.frames[F] = frame
             frame.grid(row=0, column=0, sticky="nsew")
