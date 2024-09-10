@@ -13,10 +13,13 @@ class Bill:
         total_paid_user2 = user2.get_total_paid()
         
         total_spent = total_paid_user1 + total_paid_user2
-        should_have_paid_each = total_spent / 2
+        # testing different balances. Will add option to choose how bill is split.
+        # Might be necessary if one is able to work more than the other.
+        should_have_paid_user1 = total_spent * 0.4
+        should_have_paid_user2 = total_spent * 0.6
         
-        imbalance_user1 = total_paid_user2 - should_have_paid_each
-        imbalance_user2 = total_paid_user1 - should_have_paid_each
+        imbalance_user1 = total_paid_user2 - should_have_paid_user2
+        imbalance_user2 = total_paid_user1 - should_have_paid_user1
         
         if imbalance_user1 > 0:
             print(f"{user1.name} should pay {user2.name} ${imbalance_user1:.2f} to even out.")
