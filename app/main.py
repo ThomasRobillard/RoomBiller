@@ -46,6 +46,11 @@ split.add_bill(bill2, user2) # aldi shopping paid by Jordon (user2)
 
 # Calculate_imbalance
 split.calculate_imbalance()
+export_split_data(split, 'split_data.csv')
+
+loaded_split = load_split_data('split_data.csv')
+loaded_split.calculate_imbalance()
+
 
 if __name__ == '__main__':
     main()
