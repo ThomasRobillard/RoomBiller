@@ -11,6 +11,7 @@ class Split:
         # Adds a bill to the split and assigns it to the paying user.
         # bill: The Bill object to add
         # paying_user: The User who paid the bill
+        bill.paying_user = paying_user
         self.bills.append(bill)
         paying_user.add_bill(bill)
 
