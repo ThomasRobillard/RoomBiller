@@ -1,8 +1,8 @@
-from app.data.user import User
-from app.data.bill import Bill
-from app.data.split import Split
-from app.gui.mainframe import BudgetApp
-from app.data.storage import *
+from .data.user import User
+from .data.bill import Bill
+from .data.split import Split
+from .gui.mainframe import BudgetApp
+from .data.storage import *
 import tkinter as tk
 
 def main():

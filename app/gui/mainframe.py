@@ -3,9 +3,9 @@
 
 import tkinter as tk
 
-from gui.start_page import StartPage
-from gui.split_main import SplitMain
-from gui.new_split import NewSplit
+from .start_page import StartPage
+# from app.gui.split_main import SplitMain
+# from app.gui.new_split import NewSplit
 
 class BudgetApp(tk.Tk):
     def __init__(self):
@@ -14,13 +14,13 @@ class BudgetApp(tk.Tk):
         self.geometry("600x400")
 
         # Create container for frames
-        self.frames = {}
-        for F in (StartPage, SplitMain, NewSplit):
-            frame = F(self)
-            self.frames[F] = frame
-            frame.grid(row=0, column=0, sticky="nsew")
+        # self.frames = {}
+        # for F in (StartPage, SplitMain):
+        #     frame = F(self)
+        #     self.frames[F] = frame
+        #     frame.grid(row=0, column=0, sticky="nsew")
 
-        self.show_frame(StartPage)
+        # self.show_frame(StartPage)
 
     def show_frame(self, context):
         '''Display the requested frame'''
